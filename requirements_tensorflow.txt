@@ -1,0 +1,6 @@
+tensorflow==2.11.0
+tensorboard==2.11.0
+matplotlib==3.6.2
+numpy==1.23.5
+ipykernel==6.19.2  # needed to run jupyter notebooks 
+nbconvert==7.2.7  # needed for converting ipynb to other formats such as python, html and pdf 
