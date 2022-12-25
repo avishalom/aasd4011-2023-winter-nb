@@ -1,3 +1,8 @@
+# Tensorboard log files
+runs/
+
+# Below are the default Python .gitignore from Github
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
