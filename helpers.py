@@ -33,14 +33,14 @@ def print_tensor_info(tensor: torch.Tensor, fields: list[str]=None) -> None:
     tensor : torch.Tensor
         The tensor to print information about.
     fields : list[str], optional
-        A list of fields to print. If None, all fields are printed.
+        A list of fields to print. If None, all supported fields are printed.
         Valid fields are: 'Tensor', 'Type', 'dtype', 'Dimension', 'Shape'
     Returns
     -------
     None
     """
-    # A dictionary of available fields and the corresponding function.
-    _fields = {
+    # A dictionary of the supported fields by this function, and their corresponding generating function.
+    supported_fields = {
         'Tensor':    tensor,
         'Type':      type(tensor), 
         'dtype':     tensor.dtype, 
@@ -52,12 +52,15 @@ def print_tensor_info(tensor: torch.Tensor, fields: list[str]=None) -> None:
         raise TypeError(f"The input must be a <class 'torch.Tensor'>. Instead it is a {type(tensor)}")
     if fields is not None:
         for field in fields:
-            if field not in _fields.keys():
-                raise ValueError(f"Field {field} is not a valid field. Valid fields are: {_fields.keys()}")
+            if field not in supported_fields.keys():
+                raise ValueError(f"Field {field} is not a valid field. Valid fields are: {supported_fields.keys()}")
     # set fields to all fields if None
     if fields is None:
-        fields = list(_fields.keys())
+        fields = list(supported_fields.keys())
     # print the fields
     for field in fields:
-        print(f'{field:<12} {_fields[field]}')
+        if field == 'Tensor':
+            print(f'{supported_fields[field]}')
+        else:
+            print(f'{field:<12} {supported_fields[field]}')  # all other fields are printed on a single line, and '<12' keeps the alignment
     return
