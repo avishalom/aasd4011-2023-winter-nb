@@ -94,16 +94,7 @@ def create_venv(venv_path:str, platform:str, shell:str, executable:str):
             )
         return
     print(f'{venv_path} - Creating virtual environment...')
-    # if (platform == 'Linux') | (platform == 'Darwin'):
-    #     exec_folder = '/bin/'
-    # elif platform == 'Windows':
-    #     exec_folder = '/Scripts/'
-    #subprocess.run([sys.executable, '-m', 'venv', venv_path], shell=True)
     subprocess.run(f'{executable} -m venv {venv_path}', shell=True)
-    # if (platform == 'Linux') | (platform == 'Darwin'):
-    #     subprocess.check_call([shell, '-c', f'python -m venv {venv_path}'])
-    # elif platform == 'Windows':
-    #     subprocess.check_call([shell, '/c', f'python -m venv {venv_path}'])
     print(f'{venv_path} - Virtual environment created')
 
 
