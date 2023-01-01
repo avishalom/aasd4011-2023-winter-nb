@@ -25,6 +25,7 @@ We use `pip` and `venv`, as these are the default Python environment management 
 * The reason we create two vitrual environments, and not simply one contining both, is due to a conflict with running `Tensorboard` on `PyTorch` while `Tensorflow` is installed within the same virtual environment ([Github Issue](https://github.com/pytorch/pytorch/issues/30966#issuecomment-576261087), with a potential [patch](https://github.com/pytorch/pytorch/issues/30966#issuecomment-582747929) that we're not following).
 
 ### Setting Up `vscode` to work with Notebooks and Virtual Environments
+* `vscode` needs to be restarted after setting up the virtual environments for the first time. Otherwise, the environments will not be visible. This is done once following the set up (and only if 1vscode1 was open during that time).
 * To run Python notebooks in `vscode`, you first need to install the `Python` extension by Microsoft (done via the Extensions menu on the left sidebar).
 * Then, open a notebook and set the right kernel (either `python_cpu` or `tensorflow_cpu`, depending of what the notebook is using). Setting the kernel is done on the top right side. 
 * Note that if you see wiggly orange lines below the package names in the import statement, change the interpreter to that of the virtual environment ([stackoverflow](https://stackoverflow.com/a/72721797/10006823)).
