@@ -1,4 +1,4 @@
-# AASD4011-Winter-2023
+## Mathematical Concepts for Deep Learning 1 (AASD4011, Winter 2023)
 Welcome to the AASD4011 Repository for the Winter 2023 semester. 
 This repository contains notebooks for the course, organized into modules and placed in separate folders. The module folders are numbered in the order that they will be followed. Modules will be added as course progresses.
 
@@ -13,7 +13,7 @@ To maximize your learning, it is recommended that you actively engage with the n
 Another option for creating a personal workspace is to fork this repository. This is a good option, but if you are not familiar with working with forks, including syncing them with the upstream repository, it may be a more advanced option than using branches. Additionally, it is less commonly used in the industry.
 
 ### Contribution to `main`
-While not required, we welcome contributions to the main branch. This could include suggestions for fixing typos or bugs, improving the code, or adding helpful explanations and comments. Please note that any contributions to the main branch will be subject to the repository's license, which allows for the use of the content as open-source material. While these contributions are appreciated and can make the repository's educational content better for all users, they are not a requirement for the course and will not impact your grade. If you wish to contribute, you can create a branch in this repository, make your modifications, and submit a pull request. This will be highly appreciated ! 
+While not required, we welcome contributions to the main branch. This could include suggestions for fixing typos or bugs, improving the code, or adding helpful explanations and comments. Please note that any contributions to the main branch will be subject to the repository's license, which allows for the use of the content as open-source material. While these contributions are appreciated and can make the repository's educational content better for all users, they are not a requirement for the course and will not impact your grade. If you wish to contribute, you can create a branch in this repository, make your modifications, and submit a pull request. This will be highly appreciated. 
 
 ### Feel confident to play around - you can't break anything :)
  The main branch is protected, so you can feel free to play around without worrying about breaking anything for others. main is protected through the following measures:
