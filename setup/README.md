@@ -23,10 +23,10 @@ We use `pip` and `venv`, which are the default Python environment management sys
          6. Repeat steps c-f to set up the `Tensorflow` virtual environment. _Modify any mention of 'pytorch' to 'tensorflow' in the commands_.
 #### Notes
 * For a good context about Python's `venv` module, see its (well-written) [official doc](https://docs.python.org/3/tutorial/venv.html))
-* The reason we create two vitrual environments, and not simply one contining both `PyTorch` and `Tensorflow`, is due to a conflict with running `Tensorboard` on `PyTorch` while `Tensorflow` is installed within the same environment ([Github Issue](https://github.com/pytorch/pytorch/issues/30966#issuecomment-576261087), with a potential [patch](https://github.com/pytorch/pytorch/issues/30966#issuecomment-582747929) that we're not following).
+* The reason we create two vitrual environments, and not simply one environment containing both `PyTorch` and `Tensorflow`, is due to a conflict with running `Tensorboard` on `PyTorch` while `Tensorflow` is installed  ([Github Issue](https://github.com/pytorch/pytorch/issues/30966#issuecomment-576261087), with a potential [patch](https://github.com/pytorch/pytorch/issues/30966#issuecomment-582747929) that we're not following).
 
 ### Setting Up `vscode` to work with Notebooks and Virtual Environments
-* `vscode` needs to be restarted after setting up the virtual environments for the first time as above. Otherwise, the environments will not be visible in `vscode`.
+* `vscode` needs to be restarted after setting up the virtual environments for the first time. Otherwise, the environments will not be visible in `vscode`.
 * To run Python notebooks in `vscode`, you first need to install the `Python` extension by Microsoft (done via the Extensions menu on the left sidebar).
 * Then, open a notebook and set the right kernel (either `python_cpu` or `tensorflow_cpu`, depending of what the notebook is using). Setting the kernel is done on the top right side in `vscode`. 
 * Note that if you see wiggly orange lines below the package names in the import statement, change the interpreter to that of the virtual environment by typing in the command-palette `Python: Select Interpreter` ([stackoverflow](https://stackoverflow.com/a/72721797/10006823)).
